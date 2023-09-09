@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+#data-container {
+  margin: auto;
+  display: grid;
+  padding: 40px 150px;
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+}
+.dictionary-icon {
+  color: grey;
+}
+.side-icons {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 1fr;
+  margin-bottom: 20px;
+}
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.font {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drop-down {
+  margin-top: 3px;
+  padding: 0 15px;
+  color: purple;
+}
+.white-light-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 3px;
+  color: grey;
+}
+.white-black-mode {
+  padding: 0 20px;
+}
+.search-section {
+  width: 100%;
+}
+.search-section input {
+  padding: 15px 13px;
+  width: 100%;
+  position: relative;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+  color: black;
+}
+.search-section #search-btn {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 14px;
+  color: purple;
+}
+.word-sound-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 0;
+}
+.word-section h1 {
+  font-size: 28px;
+}
+.word-section .phonetics {
+  color: purple;
+}
+.sound-section #sound {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: purple;
+}
+.sound-section #sound i {
+  border-radius: 50%;
+  background-color: rgb(216, 203, 216);
+  padding: 18px;
+}
+.noun-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+}
+.noun-section h3:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+  right: 0;
+  top: 20px;
+  z-index: -2;
+}
+.noun-section h3 span {
+  background: #fff;
+}
+.noun-section h4 {
+  font-size: 16px;
+  color: grey;
+  font-weight: 300;
+  padding: 10px 0;
+}
+.noun-section ul {
+  padding-left: 50px;
+}
+.noun-section p {
+  padding: 20px 0;
+}
+.noun-section p .synonym {
+  color: purple;
+  font-weight: bold;
+}
+.verb-section {
+  padding-bottom: 20px;
+}
+.verb-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+}
+.verb-section h3:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 95%;
+  position: absolute;
+  background-color: rgb(217, 217, 217);
+  right: 0;
+  top: 20px;
+  z-index: -2;
+}
+.verb-section h3 span {
+  background: #fff;
+}
+.verb-section h4 {
+  font-size: 16px;
+  color: grey;
+  font-weight: 300;
+  padding: 10px 0;
+}
+.verb-section ul {
+  padding-left: 50px;
+}
+.source {
+  padding: 15px 0;
+}
