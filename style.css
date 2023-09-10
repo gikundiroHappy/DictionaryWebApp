@@ -8,10 +8,11 @@
   margin: auto;
   display: grid;
   padding: 40px 150px;
+  width: 100%;
 }
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 0.2fr;
+  grid-template-columns: 1fr 0.25fr;
 }
 .dictionary-icon {
   color: grey;
@@ -42,9 +43,69 @@
   padding-top: 3px;
   color: grey;
 }
-.white-black-mode {
-  padding: 0 20px;
+
+body {
+  transition: all 0.3s ease-in-out;
 }
+body.dark {
+  background-color: black;
+}
+body.dark li {
+  color: #ffffff;
+}
+body.dark ul {
+  color: purple;
+}
+body.dark .noun-section h3 span {
+  background-color: black;
+  color: #fff;
+}
+body.dark .verb-section h3 span {
+  background-color: black;
+  color: #fff;
+}
+body.dark .search-section input {
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+body.dark .word {
+  color: white;
+}
+body.dark .source {
+  color: #fff;
+}
+body.dark .font {
+  color: #fff;
+}
+body.dark .bar {
+  color: grey;
+}
+.toggle {
+  padding: 0 20px;
+  margin-top: 3px;
+  margin-right: 4px;
+  position: relative;
+  height: 18px;
+  width: 19px;
+  border-radius: 100px;
+  background-color: grey;
+  cursor: pointer;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  background-color: white;
+  border-radius: 50%;
+  top: 10%;
+  left: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.toggle.active::before {
+  left: calc(50%);
+}
+
 .search-section {
   width: 100%;
 }
@@ -119,6 +180,7 @@
 }
 .noun-section p {
   padding: 20px 0;
+  color: grey;
 }
 .noun-section p .synonym {
   color: purple;
@@ -158,4 +220,55 @@
 }
 .source {
   padding: 15px 0;
+}
+
+@media screen and (max-width: 281px) {
+  #data-container {
+    padding: 40px 30px;
+  }
+  .noun-section ul {
+    padding-left: 25px;
+  }
+  .verb-section ul {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  #data-container {
+    padding: 40px 30px;
+  }
+  .noun-section ul {
+    padding-left: 25px;
+  }
+  .verb-section ul {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  #data-container {
+    max-width: 475px;
+    padding: 40px 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  #data-container {
+    max-width: 640px;
+    padding: 40px 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  #data-container {
+    max-width: 768px;
+    padding: 40px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #data-container {
+    max-width: 1024px;
+  }
 }

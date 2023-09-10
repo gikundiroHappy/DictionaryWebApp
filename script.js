@@ -49,10 +49,33 @@
 //       });
 //     });
 // });
+
+// veeee
+
 const dataContainer = document.getElementById("data-container");
 const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 const result = document.getElementById("result");
 const btn = document.getElementById("search-btn");
+const body = document.querySelector("body");
+const toggle = document.querySelector(".toggle");
+
+let getMode = localStorage.getItem("mode");
+if (getMode && getMode === "dark") {
+  toggle.classList.add("active");
+  body.classList.add("dark");
+}
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+});
+toggle.addEventListener("click", () => {
+  body.classList.toggle("dark");
+
+  if (!body.classList.contains("dark")) {
+    return localStorage.setItem("mode", "light");
+  }
+  localStorage.setItem("mode", "dark");
+});
 
 btn.addEventListener("click", () => {
   let inputedWord = document.getElementById("inputed-word").value;
@@ -93,7 +116,7 @@ btn.addEventListener("click", () => {
           )}</span></p>
         </div>
         <div class="verb-section">
-          <h3><span>verb</span></h3>
+          <h3><span>${wordData.meanings[1].partOfSpeech}</span></h3>
           <h4>Meaning</h4>
           <ul>
             ${wordData.meanings[1].definitions
@@ -107,7 +130,9 @@ btn.addEventListener("click", () => {
 
       const soundButton = document.getElementById("sound");
       soundButton.addEventListener("click", () => {
+        console.log(wordData.phonetics[0].audio);
         const sound = new Audio(`https:${wordData.phonetics[0].audio}`);
+
         sound.play();
       });
     })
