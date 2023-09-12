@@ -257,6 +257,9 @@ audio {
   .verb-section ul {
     padding-left: 25px;
   }
+  .search-section {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 280px) {
@@ -269,12 +272,18 @@ audio {
   .verb-section ul {
     padding-left: 25px;
   }
+  .search-section {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 475px) {
   #data-container {
     max-width: 475px;
     padding: 40px 30px;
+  }
+  .search-section {
+    width: 100%;
   }
 }
 
@@ -283,6 +292,9 @@ audio {
     max-width: 640px;
     padding: 40px 70px;
   }
+  .search-section {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -290,10 +302,16 @@ audio {
     max-width: 768px;
     padding: 40px 100px;
   }
+  .search-section {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {
   #data-container {
     max-width: 1024px;
+  }
+  .search-section {
+    width: 100%;
   }
 }
